@@ -12,7 +12,7 @@ document.getElementById('siBtn').addEventListener('click', function() {
     document.getElementById('gifContainer').style.display = 'none';
     document.getElementById('happyGifContainer').style.display = 'block';
 
-    // Ocultar los botones "Pregunta Sí" y "No "
+    // Ocultar los botones "Pregunta Sí" y "No"
     document.getElementById('question').style.display = 'none';
     document.getElementById('siBtn').style.display = 'none';
     document.body.classList.add('bg-green');
@@ -22,7 +22,12 @@ document.getElementById('siBtn').addEventListener('click', function() {
     document.getElementById('messageContainer').style.display = 'block';
     document.getElementById('messageContainer').innerHTML = '¡Siii! Te Amo - Preciosa';
 
-    // Mostrar otro gif después de 3 segundos
+    // Mostrar el botón "Siguiente" después de 1 segundo
+    setTimeout(function() {
+        document.getElementById('nextBtn').style.display = 'block'; // Muestra el botón "Siguiente"
+    }, 1000);
+
+    // Lógica para cambiar los GIFs (ya lo tenías)
     setTimeout(function() {
         document.getElementById('happyGifContainer').style.display = 'none';
         document.getElementById('happyGifContainer2').style.display = 'block';
@@ -32,12 +37,20 @@ document.getElementById('siBtn').addEventListener('click', function() {
         document.getElementById('happyGifContainer2').style.display = 'none';
         document.getElementById('happyGifContainer3').style.display = 'block';
     }, 2000);
+
     setTimeout(function() {
         document.getElementById('happyGifContainer3').style.display = 'none';
         document.getElementById('happyGifContainer4').style.display = 'block';
     }, 3000);
-  
 });
+
+// Acción del botón "Siguiente"
+document.getElementById('nextBtn').addEventListener('click', function() {
+    // Aquí puedes poner la URL a la que quieres redirigir
+    window.location.href = 'https://lmariano22.github.io/LynnPhotos.github.io/';  // Cambia esta URL por la que desees
+});
+
+
 
 
 document.getElementById('noBtn').addEventListener('click', function() {
@@ -261,3 +274,5 @@ document.getElementById('noBtn').addEventListener('click', function() {
             break;
     }
 });
+
+
